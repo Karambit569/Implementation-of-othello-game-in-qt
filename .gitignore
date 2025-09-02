@@ -1,0 +1,16 @@
+# Qt / C++ build files
+build-*/
+*.pro.user
+*.autosave
+*.o
+*.obj
+*.dll
+*.so
+*.a
+*.lib
+*.exe
+*.user
+*.qmlc
+*.jsc
+*.qmake.stash
+*.qmake.cache
