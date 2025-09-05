@@ -12,17 +12,17 @@ GameSettingDialog::GameSettingDialog(QWidget *parent) : QDialog(parent) {
     obstacleBox->setRange(0, 16);
 
     firstPlayerBox = new QComboBox(this);
-    firstPlayerBox->addItems({"흑", "백", "무작위"});
+    firstPlayerBox->addItems({"Black", "White", "Random"});
 
-    okButton = new QPushButton("확인", this);
-    cancelButton = new QPushButton("취소", this);
+    okButton = new QPushButton("Confirm", this);
+    cancelButton = new QPushButton("Cancel", this);
 
     QVBoxLayout *layout = new QVBoxLayout(this);
-    layout->addWidget(new QLabel("보드 크기:"));
+    layout->addWidget(new QLabel("Board Size:"));
     layout->addWidget(sizeBox);
-    layout->addWidget(new QLabel("장애물 개수:"));
+    layout->addWidget(new QLabel("Obstacle quantity:"));
     layout->addWidget(obstacleBox);
-    layout->addWidget(new QLabel("선공 플레이어:"));
+    layout->addWidget(new QLabel("First move:"));
     layout->addWidget(firstPlayerBox);
 
     QHBoxLayout *btnLayout = new QHBoxLayout;
