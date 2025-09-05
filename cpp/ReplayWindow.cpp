@@ -8,8 +8,8 @@ ReplayWindow::ReplayWindow(const QList<GameState> &history, QWidget *parent)
     boardView = new GameBoardWidget(history[0], this);
     boardView->setMinimumSize(400, 400);
 
-    prevBtn = new QPushButton("이전", this);
-    nextBtn = new QPushButton("다음", this);
+    prevBtn = new QPushButton("Previous", this);
+    nextBtn = new QPushButton("Next", this);
     slider = new QSlider(Qt::Horizontal, this);
     slider->setRange(0, history.size() - 1);
 
