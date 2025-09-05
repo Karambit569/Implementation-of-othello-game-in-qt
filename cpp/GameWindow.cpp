@@ -20,7 +20,7 @@ GameWindow::GameWindow(const GameSettingDialog::GameConfig &config, QWidget *par
     boardWidget->whiteCountLabel = whiteCountLabel;
 
     // Buttons
-    backButton = new QPushButton("메인화면으로", this);
+    backButton = new QPushButton("To main", this);
     connect(backButton, &QPushButton::clicked, this, &GameWindow::goToMainMenu);
 
     // Layout
