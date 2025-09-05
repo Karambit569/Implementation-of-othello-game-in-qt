@@ -15,16 +15,16 @@
 class GameBoardWidget : public QWidget {
     Q_OBJECT
 public:
-    // 새 게임용 생성자
+    
     explicit GameBoardWidget(const GameSettingDialog::GameConfig &config, QWidget *parent = nullptr);
 
-    // 이어하기용 생성자 (게임 상태 복원)
+   
     explicit GameBoardWidget(const GameState &state, QWidget *parent = nullptr);
 
     GameState getCurrentState() const { return currentState; }
 
 signals:
-    void requestReturnToMain(GameState latestState);  // 메인화면 복귀 요청
+    void requestReturnToMain(GameState latestState); 
 
 protected:
     void paintEvent(QPaintEvent *) override;
@@ -39,7 +39,7 @@ private:
     GameState currentState;
     QSet<QPair<int, int>> validMoves;
 
-    // UI 요소
+    // UI
     QLabel *turnLabel;
     QLabel *turnCountLabel;
     QLabel *scoreLabel;
