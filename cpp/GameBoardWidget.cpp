@@ -38,7 +38,7 @@ void GameBoardWidget::setupUI() {
     turnCountLabel = new QLabel(this);
     scoreLabel = new QLabel(this);
 
-    saveAndReturnBtn = new QPushButton("저장하고 메인으로", this);
+    saveAndReturnBtn = new QPushButton("Save and Exit to main", this);
     connect(saveAndReturnBtn, &QPushButton::clicked, [=]() {
         emit requestReturnToMain(currentState);
     });
@@ -53,9 +53,9 @@ void GameBoardWidget::setupUI() {
 }
 
 void GameBoardWidget::updateStatusLabels() {
-    turnLabel->setText(QString("현재 턴: %1").arg(currentState.blackTurn ? "흑" : "백"));
-    turnCountLabel->setText(QString("턴 수: %1").arg(currentState.turnCount));
-    scoreLabel->setText(QString("흑: %1개, 백: %2개")
+    turnLabel->setText(QString("Current turn: %1").arg(currentState.blackTurn ? "Black" : "White"));
+    turnCountLabel->setText(QString("Turn number: %1").arg(currentState.turnCount));
+    scoreLabel->setText(QString("Black: %1, White: %2")
                             .arg(currentState.blackCount)
                             .arg(currentState.whiteCount));
 }
@@ -161,7 +161,7 @@ void GameBoardWidget::calculateValidMoves() {
     if (validMoves.isEmpty()) {
         currentState.blackTurn = !currentState.blackTurn;
         calculateValidMoves();
-        QMessageBox::information(this, "턴 넘김", "착수할 수 없어 턴을 넘깁니다.");
+        QMessageBox::information(this, "Skip Turn", "Skipped since no move can be made");
     }
 }
 
