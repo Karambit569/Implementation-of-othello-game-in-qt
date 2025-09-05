@@ -11,11 +11,11 @@ MainWindow::MainWindow(QWidget *parent)
     QVBoxLayout *layout = new QVBoxLayout(central);
 
     gameLabel = new QLabel("Othello", this);
-    newGameBtn = new QPushButton("새 게임", this);
-    continueBtn = new QPushButton("이어하기", this);
-    replayBtn = new QPushButton("리플레이", this);
-    exitBtn = new QPushButton("게임 종료", this);
-    infoLabel = new QLabel("2024402095 강태현", this);
+    newGameBtn = new QPushButton("New Game", this);
+    continueBtn = new QPushButton("Continue", this);
+    replayBtn = new QPushButton("Replay", this);
+    exitBtn = new QPushButton("Exit", this);
+    infoLabel = new QLabel("Made by Karambit569", this);
 
     layout->addWidget(gameLabel);
     layout->addWidget(newGameBtn);
@@ -65,7 +65,7 @@ void MainWindow::startNewGame() {
 
 
 
-        qDebug() << "새 게임 시작: " << config.boardSize << "x" << config.boardSize;
+        qDebug() << "New Game Start: " << config.boardSize << "x" << config.boardSize;
     }
 }
 
