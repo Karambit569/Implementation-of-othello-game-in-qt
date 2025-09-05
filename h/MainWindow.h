@@ -30,7 +30,7 @@ private:
     QLabel *infoLabel;
 
     GameBoardWidget *gameBoard = nullptr;
-    GameState savedState; // ✅ 값 타입으로 선언
+    GameState savedState;
     QList<GameState> replayHistory;
 };
 
